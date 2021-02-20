@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pointCollection : MonoBehaviour
-{
-    // Start is called before the first frame update
-    
+{    
+    /*If the player collides with the sphere then add a point and remvoe the sphere from the world*/
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.name == "Player") {
