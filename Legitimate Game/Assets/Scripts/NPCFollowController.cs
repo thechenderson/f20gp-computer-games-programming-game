@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCController : MonoBehaviour
+public class NPCFollowController : MonoBehaviour
 {
 
 /*Where the NPC agent should be moving towards i.e. the player*/
@@ -22,7 +22,7 @@ NavMeshAgent navigateTo;
     // Update is called once per frame
     void Update()
     {
-        /*Set the intended destination for the agent i.e the players position at this frame*/
+        /*Set the intended destination for the agent i.e the players position at this*/
         navigateTo.SetDestination(agentTarget.position);
     }
 }

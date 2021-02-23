@@ -87,6 +87,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             /*Set vertical velocity in line with gravity set and modifier to increase/decrease speed of jump*/
             velocity.y = Mathf.Sqrt(jumpHeight * -2.3f * gravity);
+            Debug.Log("Jump Command Received");
         }
         /*Set the upward velocity to original calculated vertical velocity + the effect of gravity based on time*/
         velocity.y += gravity * Time.deltaTime;
