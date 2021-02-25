@@ -8,9 +8,9 @@ public class pointCollection : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.name == "Player") {
+          Destroy(gameObject);
           pointsUI.points += 1;
           Debug.Log ("Collected Point Sphere");
-          Destroy(gameObject);
         }
         
 

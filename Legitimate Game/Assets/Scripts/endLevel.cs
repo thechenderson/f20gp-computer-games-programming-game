@@ -3,10 +3,15 @@
 public class endLevel : MonoBehaviour
 {
 
-    
-    public GameManager gameManager;
-    void OnTriggerEnter() {
-        gameManager.finishLevel();
-    }
+    void OnCollisionEnter(Collision collision)
+        {
+            if (collision.transform.name == "Player") {
+            Destroy(gameObject);
+            FindObjectOfType<GameManager>().finishLevel();
+            Debug.Log ("Finshed Game");
+            }
+            
+
+        }
 
 }

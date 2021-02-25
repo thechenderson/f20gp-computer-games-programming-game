@@ -69,7 +69,6 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             /*Calculate the angle that the player needs to face to be facing the same direction as the camera*/
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            Debug.Log("targetAngle = " +targetAngle);
             /*Set the angle that the character will turn to using a combination of the current angle of the camera, the target angle and the turn time and velocity*/
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, smoothTurnTime);
 
